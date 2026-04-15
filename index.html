@@ -1,14 +1,15 @@
 <!doctype html>
 <html lang="en" >
   <head>
+    <script src ="grid.js"></script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel='stylesheet' href='styles.css'>
     <title>Midterm</title>
     <style>
+
       * {
         margin: 0;
-        padding: 0;
+        padding: 5px;
         box-sizing: border-box;
       }
 
@@ -46,40 +47,36 @@
         background: #EFF6EE
       }
 
-      .grid-container {
+      .grid {    
+        display: grid;
         border: 1px;
         padding: 0.5rem;
-        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        grid-gap: 10px;
+        grid-template-columns: repeat(auto-fill, minmax(250px,1fr));
+        /* text-rendering: optimizeLegibility; */
       }
 
-      .grid-spanning {
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-        grid-template-rows: repeat(4, 100px);
-        gap: 1.5rem;
-        
-      }
-
-      .grid-spanning .item {
+      .item {
         border: 2px dashed #4c27194c;
         border-radius: 10px;
         padding: 0.5rem;
-        min-width: 175px;
-        min-height: 115px;
-        place-items: left;
+        /* min-width: 175px; fit content*/
+        /* min-height: 115px;  */
+        /* place-items: left; */
         color: #4C2719;
-        overflow: scroll;  /* https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Text/Wrapping_breaking_text */
+        /* overflow: scroll;  https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Text/Wrapping_breaking_text */
       }
 
-      .grid-spanning .span-cols {
+
+      .grid .span-cols {
         grid-column: span 2;
       }
 
-      .grid-spanning .span-rows {
+      .grid .span-rows {
         grid-row: span 3;
       }
 
-      .grid-spanning .span-both {
+      .grid .span-both {
         grid-column: span 2;
         grid-row: span 2;
         min-width: 400px;
@@ -104,18 +101,25 @@
         background-color: #4C2719;
         color: #EFF6EE;
       }
+
+      
       </style>
      
 
       
-<div class="topnav">
-        <a href="index.html">Home</a>
-        <a href="language.html">Poems by Language</a>
-        <a href="about.html">About Dalit Poetry</a>
-</div>
+      <div class="topnav">
+              <a href="index.html">Home</a>
+              <a href="language.html">Poems by Language</a>
+              <a href="about.html">About Dalit Poetry</a>
+      </div>
+
   </head>
 
   <body>
+    
+
+
+
     <h1>Dalit Poetry Database</h1>
     
     <div class="explore-poetry">
@@ -128,144 +132,146 @@
 
       <p> The poems listed under each poet are not representative of their entire body of work. Each box is color-coded according to the original langauge the poet wrote in: <span style = "color: #CFB4CC"> Bengali (pink), </span> <span style = "color: #C0B6AF"> Hindi / Urdu (light brown), </span>  Marathi (no additional color), </span> and  <span style = "color: #A4CCCC"> Tamil (light teal). </span>  </p>
 
-      <div class="grid-container grid-spanning">
+      <div class="grid">
       
         <div class="item span-rows"; style = "background-color: #A4CCCC"> <h3>Yalan Ati	</h3> <br>
-          <a style = "text-decoration: none; color: #4C2719;" href="https://books.openedition.org/ifp/7351#:~:text=turning%20into%0Aspears.-,You%2C%20and%20Me,-The%20dead%20voice">"You, and Me"	(tr. David C. Buck and M. Kannan)</a>  <br> <br>
-          <a style = "text-decoration:none; color: #4C2719;" href="https://books.openedition.org/ifp/7351#:~:text=even%20my%20sword.-,You%E2%80%99ll%20know%E2%80%A6,-I%20do%20not">"You’ll know…" (tr. David C. Buck and M. Kannan) </a>  <br> <br>
-          <a style = "text-decoration:none; color: #4C2719;" href="https://books.openedition.org/ifp/7351#:~:text=FULL%20TEXT-,Untitled%20Poem,-Don%E2%80%99t%20poke%20through"> Untitled Poem	(tr. David C. Buck and M. Kannan)</a>  <br> <br>
-          <a style = "text-decoration:none; color: #4C2719;" href="https://books.openedition.org/ifp/7351#:~:text=casteism%0Aor%20racism%3F-,Untitled3,-Life%20is%20all"> Untitled Poem	(tr. David C. Buck and M. Kannan) </a>  <br> <br>
+          <a style = "text-decoration: none; color: #4C2719;" href="https://books.openedition.org/ifp/7351#:~:text=turning%20into%0Aspears.-,You%2C%20and%20Me,-The%20dead%20voice" target="_blank" rel="noopener noreferrer">"You, and Me"	(tr. David C. Buck and M. Kannan)</a>  <br> <br>
+          <a style = "text-decoration:none; color: #4C2719;" href="https://books.openedition.org/ifp/7351#:~:text=even%20my%20sword.-,You%E2%80%99ll%20know%E2%80%A6,-I%20do%20not" target="_blank" rel="noopener noreferrer">"You’ll know…" (tr. David C. Buck and M. Kannan) </a>  <br> <br>
+          <a style = "text-decoration:none; color: #4C2719;" href="https://books.openedition.org/ifp/7351#:~:text=FULL%20TEXT-,Untitled%20Poem,-Don%E2%80%99t%20poke%20through" target="_blank" rel="noopener noreferrer"> Untitled Poem	(tr. David C. Buck and M. Kannan)</a>  <br> <br>
+          <a style = "text-decoration:none; color: #4C2719;" href="https://books.openedition.org/ifp/7351#:~:text=casteism%0Aor%20racism%3F-,Untitled3,-Life%20is%20all" target="_blank" rel="noopener noreferrer"> Untitled Poem	(tr. David C. Buck and M. Kannan) </a>  <br> <br>
         </div>
         
-        <div class="item"> <h3>Anjali Tayade</h3> <br> <a style = "text-decoration:none; color: #4C2719;" href="https://bangalorereview.com/2024/02/seven-dalit-poets-speak-their-mind-through-their-poems-curated-by-dr-abhijit-khandkar/">"Agitation, Agitation, Agitation" (tr. Shardool Thakur) </a>
+        <div class="item"> <h3>Anjali Tayade</h3> <br> <a style = "text-decoration:none; color: #4C2719;" href="https://bangalorereview.com/2024/02/seven-dalit-poets-speak-their-mind-through-their-poems-curated-by-dr-abhijit-khandkar/" target="_blank" rel="noopener noreferrer">"Agitation, Agitation, Agitation" (tr. Shardool Thakur) </a>
         </div>
 
-        <div class="item"; style = "background-color: #C0B6AF">	<h3>Mohan Mukt</h3> <br>  <a style = "text-decoration:none; color: #4C2719;" href="https://bombaylitmag.com/contribution/mohan-mukt-issue-59/">"Himalayas Are Dalit" (tr. Bharatbhooshan Tiwari)</a> 
+        <div class="item"; style = "background-color: #C0B6AF">	<h3>Mohan Mukt</h3> <br>  <a style = "text-decoration:none; color: #4C2719;" href="https://bombaylitmag.com/contribution/mohan-mukt-issue-59/" target="_blank" rel="noopener noreferrer">"Himalayas Are Dalit" (tr. Bharatbhooshan Tiwari)</a> 
         </div>
 
-        <div class="item"> <h3>Arun Kale </h3> <br> <a style = "text-decoration:none; color: #4C2719;" href="https://sanhati.com/excerpted/6049/#:~:text=New%20Lesson%20from%20Old%20Book"> "New Lesson from Old Book" (tr. Swapna Banerjee-Guha)</a>  
+        <div class="item"> <h3>Arun Kale </h3> <br> <a style = "text-decoration:none; color: #4C2719;" href="https://sanhati.com/excerpted/6049/#:~:text=New%20Lesson%20from%20Old%20Book" target="_blank" rel="noopener noreferrer"> "New Lesson from Old Book" (tr. Swapna Banerjee-Guha)</a>  
         </div>
 
-        <div class="item"> <h3>Pratibha Rajanand</h3> <br> <a style = "text-decoration:none; color: #4C2719;" href="https://sanhati.com/excerpted/6049/#:~:text=5.-,At%20last%20Our%20Eyes%20are%20Advancing,-Pratibha%20Rajanand"> "At last Our Eyes are Advancing" (tr. Swapna Banerjee-Guha)</a>  
+        <div class="item"> <h3>Pratibha Rajanand</h3> <br> <a style = "text-decoration:none; color: #4C2719;" href="https://sanhati.com/excerpted/6049/#:~:text=5.-,At%20last%20Our%20Eyes%20are%20Advancing,-Pratibha%20Rajanand" target="_blank" rel="noopener noreferrer"> "At last Our Eyes are Advancing" (tr. Swapna Banerjee-Guha)</a>  
         </div>
 
-        <div class="item"> <h3>	Kanwal Bharti</h3> <br> <a style = "text-decoration:none; color: #4C2719;" href="https://www.revolutionarydemocracy.org/rdv17n2/dalit.htm#:~:text=Kanwal%20Bharti-,What%20would%20you%20say%3F,-The%20moment%20you"> "What would you say?" (tr. Mukesh Manas)</a>  
+        <div class="item"> <h3>	Kanwal Bharti</h3> <br> <a style = "text-decoration:none; color: #4C2719;" href="https://www.revolutionarydemocracy.org/rdv17n2/dalit.htm#:~:text=Kanwal%20Bharti-,What%20would%20you%20say%3F,-The%20moment%20you" target="_blank" rel="noopener noreferrer"> "What would you say?" (tr. Mukesh Manas)</a>  
         </div>
 
-        <div class="item"> <h3>Baban Londhe</h3> <br> <a style = "text-decoration:none; color: #4C2719;" href="https://archive.org/details/poisonedbreadtra0000unse"> "Shroud" (tr. Charudatta Bhagwat)</a>  
+        <div class="item"> <h3>Baban Londhe</h3> <br> <a style = "text-decoration:none; color: #4C2719;" href="https://archive.org/details/poisonedbreadtra0000unse" target="_blank" rel="noopener noreferrer"> "Shroud" (tr. Charudatta Bhagwat)</a>  
         </div>
 
-        <div class="item"> <h3>Arjun Dangle</h3> <br> <a style = "text-decoration:none; color: #4C2719;" href="https://archive.org/details/poisonedbreadtra0000unse"> "I will Belong to It" (tr. Shanta Gokhale)</a>  
+        <div class="item"> <h3>Arjun Dangle</h3> <br> <a style = "text-decoration:none; color: #4C2719;" href="https://archive.org/details/poisonedbreadtra0000unse" target="_blank" rel="noopener noreferrer"> "I will Belong to It" (tr. Shanta Gokhale)</a>  
         </div>
 
-        <div class="item"; style = "background-color: #A4CCCC"> <h3>Babu Masilamani</h3> <br> <a style = "text-decoration:none; color: #4C2719;" href="https://museindia.com/Home/ViewContentData?arttype=feature&issid=9&menuid=426">  "My literature"	(tr. 	Meena Kandasamy) </a>  <br> <br>
+        <div class="item"; style = "background-color: #A4CCCC"> <h3>Babu Masilamani</h3> <br> <a style = "text-decoration:none; color: #4C2719;" href="https://museindia.com/Home/ViewContentData?arttype=feature&issid=9&menuid=426" target="_blank" rel="noopener noreferrer">  "My literature"	(tr. 	Meena Kandasamy) </a>  <br> <br>
         </div>
 
-        <div class="item"; style = "background-color: #C0B6AF"> <h3>Jai Prakash</h3> <br> <a style = "text-decoration:none; color: #4C2719;" href="https://www.revolutionarydemocracy.org/rdv17n2/dalit.htm#:~:text=Yet%20remained%20untouchable%E2%80%98-,Jai%20Prakash%20Kardam,-River%0AStones%0ACome"> "River" (tr. Kardam	Mukesh Manas)</a>  
+        <div class="item"; style = "background-color: #C0B6AF"> <h3>Jai Prakash</h3> <br> <a style = "text-decoration:none; color: #4C2719;" href="https://www.revolutionarydemocracy.org/rdv17n2/dalit.htm#:~:text=Yet%20remained%20untouchable%E2%80%98-,Jai%20Prakash%20Kardam,-River%0AStones%0ACome" target="_blank" rel="noopener noreferrer"> "River" (tr. Kardam	Mukesh Manas)</a>  
         </div>
 
         <div style = "background-color: #C0B6AF"; class="item span-both"> <h3> Rajat Rani ‘Meenu’</h3> <br> 
-          <a style = "text-decoration:none; color: #4C2719;" href="https://livewire.thewire.in/livewire/five-dalit-feminist-poems/#:~:text=the%20Indian%20nation.-,Untitled,-The%20echoes%0AOf"> Untitled	(tr. Nikhil Pandhi) </a>  <br> <br>
-          <a style = "text-decoration: none; color: #4C2719;" href="https://livewire.thewire.in/livewire/five-dalit-feminist-poems/#:~:text=%C2%A7-,Wrinkles%20of%20Life,-A%20Dalit%20woman">"Wrinkles of Life" (tr. Nikhil Pandhi)</a>  <br> <br>
-          <a style = "text-decoration:none; color: #4C2719;" href="https://livewire.thewire.in/livewire/five-dalit-feminist-poems/#:~:text=%C2%A7-,Throne,-I%20have%20no"> "Throne"	(tr. Nikhil Pandhi) </a>  <br> <br>
-          <a style = "text-decoration:none; color: #4C2719;" href="https://livewire.thewire.in/livewire/five-dalit-feminist-poems/#:~:text=%C2%A7-,Self%2Drealization,-Finding%20a%20few">"Self-realization"	(tr. Nikhil Pandhi) </a>  <br> <br>
-          <a style = "text-decoration:none; color: #4C2719;" href="https://livewire.thewire.in/livewire/five-dalit-feminist-poems/#:~:text=%C2%A7-,Woman,-A%20woman%20is"> "Woman"	(tr. Nikhil Pandhi)</a>  <br> <br>
+          <a style = "text-decoration:none; color: #4C2719;" href="https://livewire.thewire.in/livewire/five-dalit-feminist-poems/#:~:text=the%20Indian%20nation.-,Untitled,-The%20echoes%0AOf" target="_blank" rel="noopener noreferrer"> Untitled	(tr. Nikhil Pandhi) </a>  <br> <br>
+          <a style = "text-decoration: none; color: #4C2719;" href="https://livewire.thewire.in/livewire/five-dalit-feminist-poems/#:~:text=%C2%A7-,Wrinkles%20of%20Life,-A%20Dalit%20woman" target="_blank" rel="noopener noreferrer">"Wrinkles of Life" (tr. Nikhil Pandhi)</a>  <br> <br>
+          <a style = "text-decoration:none; color: #4C2719;" href="https://livewire.thewire.in/livewire/five-dalit-feminist-poems/#:~:text=%C2%A7-,Throne,-I%20have%20no" target="_blank" rel="noopener noreferrer"> "Throne"	(tr. Nikhil Pandhi) </a>  <br> <br>
+          <a style = "text-decoration:none; color: #4C2719;" href="https://livewire.thewire.in/livewire/five-dalit-feminist-poems/#:~:text=%C2%A7-,Self%2Drealization,-Finding%20a%20few" target="_blank" rel="noopener noreferrer">"Self-realization"	(tr. Nikhil Pandhi) </a>  <br> <br>
+          <a style = "text-decoration:none; color: #4C2719;" href="https://livewire.thewire.in/livewire/five-dalit-feminist-poems/#:~:text=%C2%A7-,Woman,-A%20woman%20is" target="_blank" rel="noopener noreferrer"> "Woman"	(tr. Nikhil Pandhi)</a>  <br> <br>
         </div>
         
-        <div class="item">	<h3>Uttam Kamble</h3>	<br> <a style = "text-decoration:none; color: #4C2719;" href="https://www.gulmohurquarterly.com/essay/the-bahujan-concern-in-contemporary-marathi-poetry-grishma-patil-issue-06#:~:text=Humiliation/%20Uttam%20Kamble"> "Humiliation" (tr. Grishma Patil)</a>  <br>  
+        <div class="item">	<h3>Uttam Kamble</h3>	<br> <a style = "text-decoration:none; color: #4C2719;" href="https://www.gulmohurquarterly.com/essay/the-bahujan-concern-in-contemporary-marathi-poetry-grishma-patil-issue-06#:~:text=Humiliation/%20Uttam%20Kamble" target="_blank" rel="noopener noreferrer"> "Humiliation" (tr. Grishma Patil)</a>  <br>  
         </div>
               
-        <div class="item"; style = "background-color: #C0B6AF"> <h3>Gaurav J Pathania</h3>	<br> <a style = "text-decoration:none; color: #4C2719;" href="https://journals.library.brandeis.edu/index.php/caste/article/view/671/1813"> "My Pen, My Words" (tr. Richa Dube, Anurag, Annika Taneja)</a> 
+        <div class="item"; style = "background-color: #C0B6AF"> <h3>Gaurav J Pathania</h3>	<br> <a style = "text-decoration:none; color: #4C2719;" href="https://journals.library.brandeis.edu/index.php/caste/article/view/671/1813" target="_blank" rel="noopener noreferrer"> "My Pen, My Words" (tr. Richa Dube, Anurag, Annika Taneja)</a> 
         </div>
       
-        <div class="item"><h3>Damodar More</h3>	<br> <a style = "text-decoration:none; color: #4C2719;" href="https://www.gulmohurquarterly.com/essay/the-bahujan-concern-in-contemporary-marathi-poetry-grishma-patil-issue-06#:~:text=Arrangement/%20Damodar%20More"> "Arrangement" (tr. Grishma Patil)</a> 
+        <div class="item"><h3>Damodar More</h3>	<br> <a style = "text-decoration:none; color: #4C2719;" href="https://www.gulmohurquarterly.com/essay/the-bahujan-concern-in-contemporary-marathi-poetry-grishma-patil-issue-06#:~:text=Arrangement/%20Damodar%20More" target="_blank" rel="noopener noreferrer"> "Arrangement" (tr. Grishma Patil)</a> 
         </div>
 
-         <div class="item"; style = "background-color: #A4CCCC"> <h3>Devadevan</h3> <br> <a style = "text-decoration:none; color: #4C2719;" href="https://museindia.com/Home/ViewContentData?arttype=feature&issid=9&menuid=427">  "Infection"	(tr. 	Meena Kandasamy) </a>  <br> <br>
+         <div class="item"; style = "background-color: #A4CCCC"> <h3>Devadevan</h3> <br> <a style = "text-decoration:none; color: #4C2719;" href="https://museindia.com/Home/ViewContentData?arttype=feature&issid=9&menuid=427" target="_blank" rel="noopener noreferrer">  "Infection"	(tr. 	Meena Kandasamy) </a>  <br> <br>
          </div>
          
         <div class="item span-both"; style = "background-color: #CFB4CC"> <h3>Shyamal Kumar Pramanik</h3> <br>
-          <a style = "text-decoration:none; color: #4C2719;" href="https://www.academia.edu/53374893/The_Untouchable_and_Other_Poems_final_draft_R_1_"> "O My Homeland!" (tr. Jaydeep Sarangi and Anurima Chanda)</a>  <br> <br>
-          <a style = "text-decoration:none; color: #4C2719;" href="https://www.academia.edu/53374893/The_Untouchable_and_Other_Poems_final_draft_R_1_"> "When Again Will I Sing the Songs of Freedom?" (tr. Jaydeep Sarangi and Anurima Chanda)</a>  <br> <br>
-          <a style = "text-decoration:none; color: #4C2719;" href="https://www.academia.edu/53374893/The_Untouchable_and_Other_Poems_final_draft_R_1_"> "Come, Hold My Hands" (tr. Jaydeep Sarangi and Anurima Chanda)</a>  <br> <br>
-          <a style = "text-decoration:none; color: #4C2719;" href="https://www.academia.edu/53374893/The_Untouchable_and_Other_Poems_final_draft_R_1_"> "Listen, Here I Leave" (tr. Jaydeep Sarangi and Anurima Chanda)</a> 
-          <a style = "text-decoration:none; color: #4C2719;" href="https://www.academia.edu/53374893/The_Untouchable_and_Other_Poems_final_draft_R_1_"> "My Existence in Ruins" (tr. Jaydeep Sarangi and Anurima Chanda)</a> 
-          <a style = "text-decoration:none; color: #4C2719;" href="https://www.academia.edu/53374893/The_Untouchable_and_Other_Poems_final_draft_R_1_"> "Descending Darkness" (tr. Jaydeep Sarangi and Anurima Chanda)</a> 
+          <a style = "text-decoration:none; color: #4C2719;" href="https://www.academia.edu/53374893/The_Untouchable_and_Other_Poems_final_draft_R_1_" target="_blank" rel="noopener noreferrer"> "O My Homeland!" (tr. Jaydeep Sarangi and Anurima Chanda)</a>  <br> <br>
+          <a style = "text-decoration:none; color: #4C2719;" href="https://www.academia.edu/53374893/The_Untouchable_and_Other_Poems_final_draft_R_1_" target="_blank" rel="noopener noreferrer"> "When Again Will I Sing the Songs of Freedom?" (tr. Jaydeep Sarangi and Anurima Chanda)</a>  <br> <br>
+          <a style = "text-decoration:none; color: #4C2719;" href="https://www.academia.edu/53374893/The_Untouchable_and_Other_Poems_final_draft_R_1_" target="_blank" rel="noopener noreferrer"> "Come, Hold My Hands" (tr. Jaydeep Sarangi and Anurima Chanda)</a>  <br> <br>
+          <a style = "text-decoration:none; color: #4C2719;" href="https://www.academia.edu/53374893/The_Untouchable_and_Other_Poems_final_draft_R_1_" target="_blank" rel="noopener noreferrer"> "Listen, Here I Leave" (tr. Jaydeep Sarangi and Anurima Chanda)</a> 
+          <a style = "text-decoration:none; color: #4C2719;" href="https://www.academia.edu/53374893/The_Untouchable_and_Other_Poems_final_draft_R_1_" target="_blank" rel="noopener noreferrer"> "My Existence in Ruins" (tr. Jaydeep Sarangi and Anurima Chanda)</a> 
+          <a style = "text-decoration:none; color: #4C2719;" href="https://www.academia.edu/53374893/The_Untouchable_and_Other_Poems_final_draft_R_1_" target="_blank" rel="noopener noreferrer" > "Descending Darkness" (tr. Jaydeep Sarangi and Anurima Chanda)</a> 
         </div>    
 
-        <div class="item"> <h3>Baburao Bagul</h3> <br> <a style = "text-decoration:none; color: #4C2719;" href="https://sanhati.com/excerpted/6049/#:~:text=is%20being%20committed.-,2.%20Before%20the%20Vedas,-Baburao%20Bagul"> "Before the Vedas" (tr. Swapna Banerjee-Guha)</a>  
+        <div class="item"> <h3>Baburao Bagul</h3> <br> <a style = "text-decoration:none; color: #4C2719;" href="https://sanhati.com/excerpted/6049/#:~:text=is%20being%20committed.-,2.%20Before%20the%20Vedas,-Baburao%20Bagul" target="_blank" rel="noopener noreferrer"> "Before the Vedas" (tr. Swapna Banerjee-Guha)</a>  
         </div>
 
-         <div class="item"; style = "background-color: #C0B6AF"> <h3>Om Prakash Valmiki</h3> <br> <a style = "text-decoration:none; color: #4C2719;" href="https://www.revolutionarydemocracy.org/rdv17n2/dalit.htm#:~:text=of%20those%20gods%3F-,Om%20Prakash%20Valmiki,-However%0ACut%20forests"> "However" (tr. Mukesh Manas)</a>  
+         <div class="item"; style = "background-color: #C0B6AF"> <h3>Om Prakash Valmiki</h3> <br> <a style = "text-decoration:none; color: #4C2719;" href="https://www.revolutionarydemocracy.org/rdv17n2/dalit.htm#:~:text=of%20those%20gods%3F-,Om%20Prakash%20Valmiki,-However%0ACut%20forests" target="_blank" rel="noopener noreferrer"> "However" (tr. Mukesh Manas)</a>  
         </div>
 
-        <div class="item"; style = "background-color: #C0B6AF"> <h3>Mukesh Manas</h3> <br> <a style = "text-decoration:none; color: #4C2719;" href="https://www.revolutionarydemocracy.org/rdv17n2/dalit.htm#:~:text=Crushing%20your%20chest-,Mukesh%20Manas,-Spartacus%20of%20new"> "Spartacus of new era" (self-translated)</a>  
+        <div class="item"; style = "background-color: #C0B6AF"> <h3>Mukesh Manas</h3> <br> <a style = "text-decoration:none; color: #4C2719;" href="https://www.revolutionarydemocracy.org/rdv17n2/dalit.htm#:~:text=Crushing%20your%20chest-,Mukesh%20Manas,-Spartacus%20of%20new" target="_blank" rel="noopener noreferrer"> "Spartacus of new era" (self-translated)</a>  
         </div>
 
-        <div class="item"> <h3>Waharu Sonawane</h3> <br> <a style = "text-decoration:none; color: #4C2719;" href="https://sanhati.com/excerpted/6049/#:~:text=is%20the%20world.-,3.%20Stage,-Waharu%20Sonawane"> "Stage" (tr. Swapna Banerjee-Guha)</a>  
+        <div class="item"> <h3>Waharu Sonawane</h3> <br> <a style = "text-decoration:none; color: #4C2719;" href="https://sanhati.com/excerpted/6049/#:~:text=is%20the%20world.-,3.%20Stage,-Waharu%20Sonawane" target="_blank" rel="noopener noreferrer"> "Stage" (tr. Swapna Banerjee-Guha)</a>  
         </div>
 
         <div class="item span-rows"; style = "background-color: #A4CCCC"> <h3>Sukirtharani	</h3> <br>
-          <a style = "text-decoration:none; color: #4C2719;" href="https://www.lyrikline.org/en/translations/details/4185/13098">  "[Infant language]"	(tr. Lakshmi Holmström) </a>  <br> <br>
-          <a style = "text-decoration: none; color: #4C2719;" href="https://www.lyrikline.org/en/translations/details/4183/13100">  "[My room needs no calendar]"	(tr. Lakshmi Holmström)</a>  <br> <br>
-          <a style = "text-decoration:none; color: #4C2719;" href="https://www.lyrikline.org/en/translations/details/4186/13097"> "Nature’s fountainhead" (tr. Lakshmi Holmström) </a>  <br> <br>
-          <a style = "text-decoration:none; color: #4C2719;" href="https://www.lyrikline.org/en/translations/details/4184/13099">  "My body"	(tr. Lakshmi Holmström) </a>  <br> <br>
-          <a style = "text-decoration:none; color: #4C2719;" href="https://www.lyrikline.org/en/translations/details/4187/13096"> "Portrait of My Village"	(tr. Nikhil Pandhi) </a>  <br> <br>
-          <a style = "text-decoration:none; color: #4C2719;" href="https://www.lyrikline.org/en/translations/details/5179/12201"> "The Flag of Freedom"	(tr. N. Kalyan Raman) </a>  <br> <br>
-          <a style = "text-decoration:none; color: #4C2719;" href="https://www.lyrikline.org/en/translations/details/5177/12202"> Untitled poem (tr. N. Kalyan Raman) </a>  <br> <br>
+          <a style = "text-decoration:none; color: #4C2719;" href="https://www.lyrikline.org/en/translations/details/4185/13098" target="_blank" rel="noopener noreferrer">  "[Infant language]"	(tr. Lakshmi Holmström) </a>  <br> <br>
+          <a style = "text-decoration: none; color: #4C2719;" href="https://www.lyrikline.org/en/translations/details/4183/13100" target="_blank" rel="noopener noreferrer">  "[My room needs no calendar]"	(tr. Lakshmi Holmström)</a>  <br> <br>
+          <a style = "text-decoration:none; color: #4C2719;" href="https://www.lyrikline.org/en/translations/details/4186/13097" target="_blank" rel="noopener noreferrer"> "Nature’s fountainhead" (tr. Lakshmi Holmström) </a>  <br> <br>
+          <a style = "text-decoration:none; color: #4C2719;" href="https://www.lyrikline.org/en/translations/details/4184/13099" target="_blank" rel="noopener noreferrer">  "My body"	(tr. Lakshmi Holmström) </a>  <br> <br>
+          <a style = "text-decoration:none; color: #4C2719;" href="https://www.lyrikline.org/en/translations/details/4187/13096" target="_blank" rel="noopener noreferrer"> "Portrait of My Village"	(tr. Nikhil Pandhi) </a>  <br> <br>
+          <a style = "text-decoration:none; color: #4C2719;" href="https://www.lyrikline.org/en/translations/details/5179/12201" target="_blank" rel="noopener noreferrer"> "The Flag of Freedom"	(tr. N. Kalyan Raman) </a>  <br> <br>
+          <a style = "text-decoration:none; color: #4C2719;" href="https://www.lyrikline.org/en/translations/details/5177/12202" target="_blank" rel="noopener noreferrer"> Untitled poem (tr. N. Kalyan Raman) </a>  <br> <br>
         </div>
 
-        <div style = "background-color: #C0B6AF"; class="item span-rows"> <h3> Poonam Tushamad</h3> <br> 
-          <a style = "text-decoration:none; color: #4C2719;" href="https://scroll.in/article/1028933/a-woman-and-fire-are-as-ancient-as-civilisation-six-dalit-feminist-poems-by-poonam-tushamad#:~:text=has%20been%20burned.-,Human%20and%20Woman,-Am%20I%20your"> "Human and Woman" (tr. Nikhil Pandhi)</a>  <br> <br>
-          <a style = "text-decoration: none; color: #4C2719;" href="https://scroll.in/article/1028933/a-woman-and-fire-are-as-ancient-as-civilisation-six-dalit-feminist-poems-by-poonam-tushamad#:~:text=the%20man%2Deater.-,Untitled,-All%20we%20came">  Untitled	(tr. Nikhil Pandhi)</a>  <br> <br>
-          <a style = "text-decoration:none; color: #4C2719;" href="https://scroll.in/article/1028933/a-woman-and-fire-are-as-ancient-as-civilisation-six-dalit-feminist-poems-by-poonam-tushamad#:~:text=Home%2C%20Woman%2C%20Walking"> "Home, Woman, Walking"	(tr. Nikhil Pandhi) </a>  <br> <br>
-          <a style = "text-decoration:none; color: #4C2719;" href="https://scroll.in/article/1028933/a-woman-and-fire-are-as-ancient-as-civilisation-six-dalit-feminist-poems-by-poonam-tushamad#:~:text=an%20embodied%20urgency.-,Woman%20and%20Fire,-He%20said%2C"> "Woman and Fire"	(tr. Nikhil Pandhi) </a>  <br> <br>
-          <a style = "text-decoration:none; color: #4C2719;" href="https://scroll.in/article/1028933/a-woman-and-fire-are-as-ancient-as-civilisation-six-dalit-feminist-poems-by-poonam-tushamad#:~:text=A%20single%20penny.-,Furnace,-In%20the%20furnaces">"Furnace"	(tr.	Nikhil Pandhi) </a>  <br> <br>
-          <a style = "text-decoration:none; color: #4C2719;" href="https://scroll.in/article/1028933/a-woman-and-fire-are-as-ancient-as-civilisation-six-dalit-feminist-poems-by-poonam-tushamad#:~:text=stomachs%20is%20contained.-,Worth,-He%20glared%20at"> "Worth"	(tr. Nikhil Pandhij)</a>  <br> <br>
+        <div class="item span-rows"; style = "background-color: #C0B6AF"> <h3> Poonam Tushamad</h3> <br> 
+          <a style = "text-decoration:none; color: #4C2719;" href="https://scroll.in/article/1028933/a-woman-and-fire-are-as-ancient-as-civilisation-six-dalit-feminist-poems-by-poonam-tushamad#:~:text=has%20been%20burned.-,Human%20and%20Woman,-Am%20I%20your" target="_blank" rel="noopener noreferrer"> "Human and Woman" (tr. Nikhil Pandhi)</a>  <br> <br>
+          <a style = "text-decoration: none; color: #4C2719;" href="https://scroll.in/article/1028933/a-woman-and-fire-are-as-ancient-as-civilisation-six-dalit-feminist-poems-by-poonam-tushamad#:~:text=the%20man%2Deater.-,Untitled,-All%20we%20came" target="_blank" rel="noopener noreferrer">  Untitled	(tr. Nikhil Pandhi)</a>  <br> <br>
+          <a style = "text-decoration:none; color: #4C2719;" href="https://scroll.in/article/1028933/a-woman-and-fire-are-as-ancient-as-civilisation-six-dalit-feminist-poems-by-poonam-tushamad#:~:text=Home%2C%20Woman%2C%20Walking" target="_blank" rel="noopener noreferrer"> "Home, Woman, Walking"	(tr. Nikhil Pandhi) </a>  <br> <br>
+          <a style = "text-decoration:none; color: #4C2719;" href="https://scroll.in/article/1028933/a-woman-and-fire-are-as-ancient-as-civilisation-six-dalit-feminist-poems-by-poonam-tushamad#:~:text=an%20embodied%20urgency.-,Woman%20and%20Fire,-He%20said%2C" target="_blank" rel="noopener noreferrer"> "Woman and Fire"	(tr. Nikhil Pandhi) </a>  <br> <br>
+          <a style = "text-decoration:none; color: #4C2719;" href="https://scroll.in/article/1028933/a-woman-and-fire-are-as-ancient-as-civilisation-six-dalit-feminist-poems-by-poonam-tushamad#:~:text=A%20single%20penny.-,Furnace,-In%20the%20furnaces" target="_blank" rel="noopener noreferrer">"Furnace"	(tr.	Nikhil Pandhi) </a>  <br> <br>
+          <a style = "text-decoration:none; color: #4C2719;" href="https://scroll.in/article/1028933/a-woman-and-fire-are-as-ancient-as-civilisation-six-dalit-feminist-poems-by-poonam-tushamad#:~:text=stomachs%20is%20contained.-,Worth,-He%20glared%20at" target="_blank" rel="noopener noreferrer"> "Worth"	(tr. Nikhil Pandhij)</a>  <br> <br>
         </div>
      
        <div class="item span-both"; style = "background-color: #A4CCCC"> <h3>N.D. Rajkumar</h3> <br>
-          <a style = "text-decoration:none; color: #4C2719;" href="https://tamilnation.org/literature/dalit.pdf"> 1	(tr. Nikhil Pandhi) </a>  <br> <br>
-          <a style = "text-decoration: none; color: #4C2719;" href="https://tamilnation.org/literature/dalit.pdf"> 2 (tr. Nikhil Pandhi)</a>  <br> <br>
-          <a style = "text-decoration:none; color: #4C2719;" href="https://tamilnation.org/literature/dalit.pdf"> 3	(tr. Nikhil Pandhi) </a>  <br> <br>
-          <a style = "text-decoration:none; color: #4C2719;" href="https://tamilnation.org/literature/dalit.pdf"> 4	(tr. Nikhil Pandhi) </a>  <br> <br>
-          <a style = "text-decoration:none; color: #4C2719;" href="https://tamilnation.org/literature/dalit.pdf"> 5	(tr. Nikhil Pandhi) </a>  <br> <br>
+          <a style = "text-decoration:none; color: #4C2719;" href="https://tamilnation.org/literature/dalit.pdf" target="_blank" rel="noopener noreferrer"> 1	(tr. Nikhil Pandhi) </a>  <br> <br>
+          <a style = "text-decoration: none; color: #4C2719;" href="https://tamilnation.org/literature/dalit.pdf" target="_blank" rel="noopener noreferrer"> 2 (tr. Nikhil Pandhi)</a>  <br> <br>
+          <a style = "text-decoration:none; color: #4C2719;" href="https://tamilnation.org/literature/dalit.pdf" target="_blank" rel="noopener noreferrer"> 3	(tr. Nikhil Pandhi) </a>  <br> <br>
+          <a style = "text-decoration:none; color: #4C2719;" href="https://tamilnation.org/literature/dalit.pdf" target="_blank" rel="noopener noreferrer"> 4	(tr. Nikhil Pandhi) </a>  <br> <br>
+          <a style = "text-decoration:none; color: #4C2719;" href="https://tamilnation.org/literature/dalit.pdf" target="_blank" rel="noopener noreferrer"> 5	(tr. Nikhil Pandhi) </a>  <br> <br>
         </div>
         
-         <div class="item"> <h3>L. S. Rokade</h3> <br> <a style = "text-decoration:none; color: #4C2719;" href="https://marathidalitpoetry.blogspot.com/2014/07/to-be-or-not-to-be-bornlsrokade.html"> "To be or Not to be Born" (tr. Shanta Gokhale) </a>  
+         <div class="item"> <h3>L. S. Rokade</h3> <br> <a style = "text-decoration:none; color: #4C2719;" href="https://marathidalitpoetry.blogspot.com/2014/07/to-be-or-not-to-be-bornlsrokade.html" target="_blank" rel="noopener noreferrer"> "To be or Not to be Born" (tr. Shanta Gokhale) </a>  
         </div>
 
-         <div class="item"; style = "background-color: #C0B6AF"> <h3>	Anita Bharti</h3> <br> <a style = "text-decoration:none; color: #4C2719;" href="https://kashmirlit.org/ten-poems-by-anita-bharti/"> Rukhsana’s House Poems (tr. Huzaifa Pandit)</a>  
+         <div class="item"; style = "background-color: #C0B6AF"> <h3>	Anita Bharti</h3> <br> <a style = "text-decoration:none; color: #4C2719;" href="https://kashmirlit.org/ten-poems-by-anita-bharti/" target="_blank" rel="noopener noreferrer"> Rukhsana’s House Poems (tr. Huzaifa Pandit)</a>  
         </div>
         
         <div class="item span-cols"; style = "background-color: #A4CCCC"> <h3>Azhagiya Periyavan	</h3> <br>
-          <a style = "text-decoration:none; color: #4C2719;" href="https://museindia.com/Home/ViewContentData?arttype=feature&issid=9&menuid=425"> "At first it is ours"	(tr. Meena Kandasamy) </a>  <br> <br>
-          <a style = "text-decoration: none; color: #4C2719;" href="https://tamilnation.org/literature/dalit.pdf"> "The word for you and me"	(tr. Meena Kandasamy)</a>  <br> <br>
+          <a style = "text-decoration:none; color: #4C2719;" href="https://museindia.com/Home/ViewContentData?arttype=feature&issid=9&menuid=425" target="_blank" rel="noopener noreferrer"> "At first it is ours"	(tr. Meena Kandasamy) </a>  <br> <br>
+          <a style = "text-decoration: none; color: #4C2719;" href="https://tamilnation.org/literature/dalit.pdf" target="_blank" rel="noopener noreferrer"> "The word for you and me"	(tr. Meena Kandasamy)</a>  <br> <br>
         </div>
       
-        <div class="item"; style = "background-color: #CFB4CC" > <h3>Kalyani Thakur Charal</h3> <br> <a style = "text-decoration:none; color: #4C2719;" href="https://museindia.com/Home/ViewContentData?arttype=feature&issid=112&menuid=10868">"THE GIRL WHO TRACKS THE DARK (tr. Sipra Mukherjee) </a>  
+        <div class="item"; style = "background-color: #CFB4CC" > <h3>Kalyani Thakur Charal</h3> <br> <a style = "text-decoration:none; color: #4C2719;" href="https://museindia.com/Home/ViewContentData?arttype=feature&issid=112&menuid=10868" target="_blank" rel="noopener noreferrer">"THE GIRL WHO TRACKS THE DARK (tr. Sipra Mukherjee) </a>  
         </div>
 
-        <div class="item"; ; style = "background-color: #CFB4CC">	<h3>Smritikana Howlader</h3> <br>  <a style = "text-decoration:none; color:  #4C2719;" href="https://museindia.com/Home/ViewContentData?arttype=focus&issid=55&menuid=4922>"> The Song of the Refugees" (tr. 	Angana Dutta)</a> 
+        <div class="item"; ; style = "background-color: #CFB4CC">	<h3>Smritikana Howlader</h3> <br>  <a style = "text-decoration:none; color:  #4C2719;" href="https://museindia.com/Home/ViewContentData?arttype=focus&issid=55&menuid=4922>" target="_blank" rel="noopener noreferrer"> The Song of the Refugees" (tr. 	Angana Dutta)</a> 
         </div>
 
-        <div class="item"; style = "background-color: #C0B6AF"> <h3>	Susheela Takbhore </h3> <br> <a style = "text-decoration:none; color: #4C2719;" href="        https://www.gulmohurquarterly.com/essay/the-dalit-question-in-contemporary-hindi-poetry-ambrish-issue-06#:~:text=Harvests%20of%20Pain/%20Susheela%20Takbhore"> "Harvests of Pain" (tr. 	Ambrish)</a>  
+        <div class="item"; style = "background-color: #C0B6AF"> <h3>	Susheela Takbhore </h3> <br> <a style = "text-decoration:none; color: #4C2719;" href="        https://www.gulmohurquarterly.com/essay/the-dalit-question-in-contemporary-hindi-poetry-ambrish-issue-06#:~:text=Harvests%20of%20Pain/%20Susheela%20Takbhore" target="_blank" rel="noopener noreferrer"> "Harvests of Pain" (tr. 	Ambrish)</a>  
         </div>
 
-        <div class="item"; style = "background-color: #C0B6AF"> <h3>	Rajani Anuragi</h3> <br> <a style = "text-decoration:none; color: #4C2719;" href="https://www.revolutionarydemocracy.org/rdv17n2/dalit.htm#:~:text=Rajani%20Anuragi-,Poem,-You%20ride%20the"> "Poem" (tr. Mukesh Manas)</a>  
+        <div class="item"; style = "background-color: #C0B6AF"> <h3>	Rajani Anuragi</h3> <br> <a style = "text-decoration:none; color: #4C2719;" href="https://www.revolutionarydemocracy.org/rdv17n2/dalit.htm#:~:text=Rajani%20Anuragi-,Poem,-You%20ride%20the" target="_blank" rel="noopener noreferrer"> "Poem" (tr. Mukesh Manas)</a>  
         </div>
       
         <div class="item span-cols"; style = "background-color: #A4CCCC"> <h3>Ragasiyan</h3> <br>
-          <a style = "text-decoration:none; color: #4C2719;" href="https://museindia.com/Home/ViewContentData?arttype=feature&issid=9&menuid=432">  "Show me"	(tr. 	Meena Kandasamy) </a>  <br> <br>
-          <a style = "text-decoration: none; color: #4C2719;" href="https://museindia.com/Home/ViewContentData?arttype=feature&issid=9&menuid=432"> "The vegetarians who feast on my flesh"	(tr. 	Meena Kandasamy)</a>  <br> <br>
-          <a style = "text-decoration: none; color: #4C2719;" href="https://museindia.com/Home/ViewContentData?arttype=feature&issid=9&menuid=432"> "The Eleventh Commandment"	(tr. 	Meena Kandasamy)</a>  <br> <br>
+          <a style = "text-decoration:none; color: #4C2719;" href="https://museindia.com/Home/ViewContentData?arttype=feature&issid=9&menuid=432" target="_blank" rel="noopener noreferrer">  "Show me"	(tr. 	Meena Kandasamy) </a>  <br> <br>
+          <a style = "text-decoration: none; color: #4C2719;" href="https://museindia.com/Home/ViewContentData?arttype=feature&issid=9&menuid=432" target="_blank" rel="noopener noreferrer"> "The vegetarians who feast on my flesh"	(tr. 	Meena Kandasamy)</a>  <br> <br>
+          <a style = "text-decoration: none; color: #4C2719;" href="https://museindia.com/Home/ViewContentData?arttype=feature&issid=9&menuid=432" target="_blank" rel="noopener noreferrer"> "The Eleventh Commandment"	(tr. 	Meena Kandasamy)</a>  <br> <br>
         </div>
 
         <div class="item span-cols"; style = "background-color: #A4CCCC"> <h3>Gnanaparai</h3> <br>
-          <a style = "text-decoration:none; color: #4C2719;" href="https://museindia.com/Home/ViewContentData?arttype=feature&issid=9&menuid=429">  "Don't you know?"	(tr. 	Meena Kandasamy) </a>  <br> <br>
-          <a style = "text-decoration: none; color: #4C2719;" href="https://museindia.com/Home/ViewContentData?arttype=feature&issid=9&menuid=429"> "Teablood"	(tr. 	Meena Kandasamy)</a>  <br> <br>
+          <a style = "text-decoration:none; color: #4C2719;" href="https://museindia.com/Home/ViewContentData?arttype=feature&issid=9&menuid=429" target="_blank" rel="noopener noreferrer">  "Don't you know?"	(tr. 	Meena Kandasamy) </a>  <br> <br>
+          <a style = "text-decoration: none; color: #4C2719;" href="https://museindia.com/Home/ViewContentData?arttype=feature&issid=9&menuid=429" target="_blank" rel="noopener noreferrer"> "Teablood"	(tr. 	Meena Kandasamy)</a>  <br> <br>
         </div>
     </div>
+
+  
   </body>
 </html>
 
