@@ -1,0 +1,85 @@
+
+   * {
+        margin: 0;
+        padding: 5px;
+        box-sizing: border-box;
+        font-family: "PT Serif";
+        line-height: 1.5;
+        color: #4C2719;
+      }
+
+      h1 {
+        font-size: 2.2rem;
+        font-weight: 550;
+        color: #053061;
+        margin-bottom: 1rem;
+
+      }
+
+      
+      h2 {
+        font-size: 1.9rem;
+        font-weight:400;
+      }
+
+      h3 {
+        font-size: 1.3rem;
+        font-weight:300;
+        margin-bottom: 1rem;
+      }
+
+      @font-face{
+        font-family: "PT Serif";
+        src: url(fonts/PT_Serif/PTSerif-Regular.ttf) format("truetype");
+        font-weight: normal;
+        font-style: normal;
+      }
+
+
+      body {
+        padding: 2rem;
+        /* background: linear-gradient(90deg,rgba(2, 0, 36, 1) 0%, rgba(5, 38, 84, 1) 41%, rgba(54, 139, 156, 1) 100%); */
+        background: #EFF6EE
+      }
+
+ /* referenced https://www.w3schools.com/howto/howto_js_topnav.asp to create navigation bar*/
+
+      .topnav {
+        overflow: hidden;
+      }
+      .topnav a {
+        float: left;
+        color: #4C2719;
+        text-align: left;
+        padding: 20px  ;
+        text-decoration: none;
+        border-radius: 45px;
+        font-size: 17px;
+      }
+      
+      .topnav a:hover {
+        background-color: #4C2719;
+        color: #EFF6EE;
+      }
+
+      .container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 16px;
+      }
+
+      
+      #flex-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 5px;
+      }
+
+      .flex-item {
+        flex: 1 1 300px;   
+        min-width: 300px; 
+        border: 2px dashed #4c27194c;
+        border-radius: 10px;
+        padding: 1rem;
+        color: #4C2719;
+      }

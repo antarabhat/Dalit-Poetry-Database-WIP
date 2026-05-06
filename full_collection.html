@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dalit Poetry Database</title>
+
+    <link rel="stylesheet" href="styles.css" />
+    <script src="//cdnjs.cloudflare.com/ajax/libs/list.js/2.3.1/list.min.js"></script>
+
+    <script src="script.js" defer></script>
+
+    <div class="topnav">
+        <a href="index.html">Home</a>
+        <a href="full_collection.html">Full Collection</a>
+        <a href="about.html">About Dalit Poetry</a>
+    </div>
+  </head>
+  
+  <body id = "full-collection">
+
+    <h1>Dalit Poetry Database</h1>
+    
+    <div id = "list-container">
+      <menu>
+        <input id="search" class="fuzzy-search" placeholder="Search">
+        <button class = "sort" data-sort = "Title"> Sort by Title</button>
+        <button class = "sort" data-sort = "Author"> Sort by Author</button>
+        <button class = "sort" data-sort = "Translator"> Sort by Translator</button>
+        <button class = "sort" data-sort = "Language"> Sort by Language</button>
+      </menu>
+
+      <br> 
+
+      <p> Explore the larger collection of translated Dalit-authored poems below. You can sort through the collection using the buttons above or with the search bar. <br> <br> 
+      </p>
+      <p> Each box is color-coded according to the original langauge the poem was in: <span style = "background-color: #CFB4CC"> Bengali </span> , <span style = "background-color: #C0B6AF"> Hindi / Urdu </span> , <span style = "background-color: white"> Marathi </span> , and  <span style = "background-color: #A4CCCC"> Tamil. </span>  </p>
+     <br> 
+
+      <div class="list" id="flex-container"></div>
+   
+    </div>
+
+  </body>
+
+</html>
